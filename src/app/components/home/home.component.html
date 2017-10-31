@@ -1,0 +1,14 @@
+<div *ngIf="!noticias.articles">
+    <h2>No existe ninguna noticia</h2>
+</div>
+<div *ngFor="let noticia of noticias.articles; let i = index">
+    <div *ngIf="i<5" class="example-card">
+        <div class="row">
+            <h2>{{noticia.title}}</h2>
+            <div class="col-lg-4">
+                <img src="{{noticia.urlToImage}}">
+            </div>
+        </div>
+        <button class="button gray" (click)="guardar(noticia.title,noticia.description,noticia.urlToImage)">Guardar</button>
+    </div>
+</div>
