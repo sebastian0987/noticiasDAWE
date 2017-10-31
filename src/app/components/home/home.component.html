@@ -1,7 +1,7 @@
-<div *ngIf="!noticias.articles">
+<div *ngIf="!noticias">
     <h2>No existe ninguna noticia</h2>
 </div>
-<div *ngFor="let noticia of noticias.articles; let i = index">
+<div *ngFor="let noticia of noticias; let i = index">
     <div *ngIf="i<5" class="example-card">
         <div class="row">
             <h2>{{noticia.title}}</h2>

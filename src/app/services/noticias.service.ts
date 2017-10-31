@@ -24,4 +24,13 @@ export class NoticiasService {
         .map(
             res => res.json());
   }
+
+  getFavoritos(){
+    return this._http.get('http://localhost/prueba2DAWE-backend/index.php/favoritos').map(res => res.json());
+  }
+
+  getDetalleFavorito(id){
+    return this._http.get('http://localhost/prueba2DAWE-backend/index.php/favorito/'+id).map(res => res.json());
+  }
+
 }

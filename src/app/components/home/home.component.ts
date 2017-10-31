@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         this.noticiasService.getNoticia().subscribe(
             result => {
-                this.noticias = result;
+                this.noticias = result.articles;
             }
         );
     }

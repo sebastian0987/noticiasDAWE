@@ -1,8 +1,8 @@
 export class Noticia{
 
-    private titulo: string;
-    private descripcion: string;
-    private urlimagen: string;
+    public titulo: string;
+    public descripcion: string;
+    public urlimagen: string;
     contructor(){}
 
     setTitulo(titulo:string){
@@ -16,5 +16,6 @@ export class Noticia{
     setUrl(url:string){
         this.urlimagen=url;
     }
+
 
 }
