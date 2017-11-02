@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute,Params} from '@angular/router';
-import {NoticiasService} from "../../services/noticias.service";
+import {Router, ActivatedRoute, Params} from '@angular/router';
+import {NoticiasService} from '../../services/noticias.service';
 import {Noticia} from '../../models/Noticia';
 
 @Component({
@@ -18,7 +18,7 @@ export class DetalleNoticiaComponent implements OnInit {
     this.getNoticia();
   }
 
-  getNoticia(){
+  getNoticia() {
     this._route.params.forEach((params: Params) => {
       let id = params['id'];
 

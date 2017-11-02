@@ -11,11 +11,11 @@ export class NoticiasService {
     this.url = 'https://newsapi.org/v1/articles?source=ign&sortBy=top&apiKey=1d8af17633df48d38b96417d01adf99b';
   }
 
-  getNoticia(){
+  getNoticia() {
     return this._http.get(this.url).map(res => res.json());
   }
 
-  addNoticia(noticia: Noticia){
+  addNoticia(noticia: Noticia) {
     let json = JSON.stringify(noticia);
     // let params = 'json='+json;
     console.log(json);
@@ -30,7 +30,7 @@ export class NoticiasService {
   }
 
   getDetalleFavorito(id){
-    return this._http.get('http://localhost/prueba2DAWE-backend/index.php/favorito/'+id).map(res => res.json());
+    return this._http.get('http://localhost/prueba2DAWE-backend/index.php/favorito/'+ id).map(res => res.json());
   }
 
 }

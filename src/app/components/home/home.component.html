@@ -1,14 +1,27 @@
+<!--<app-menu-global></app-menu-global>-->
 <div *ngIf="!noticias">
-    <h2>No existe ninguna noticia</h2>
+  <h2>No existe ninguna noticia</h2>
 </div>
-<div *ngFor="let noticia of noticias; let i = index">
-    <div *ngIf="i<5" class="example-card">
-        <div class="row">
-            <h2>{{noticia.title}}</h2>
-            <div class="col-lg-4">
-                <img src="{{noticia.urlToImage}}">
-            </div>
-        </div>
-        <button class="button gray" (click)="guardar(noticia.title,noticia.description,noticia.urlToImage)">Guardar</button>
+
+<mat-card class="example-card">
+  <div *ngFor="let noticia of noticias; let i = index">
+    <div *ngIf="i<10" class="example-card">
+      <div class="row">
+        <mat-card-header>
+          <mat-card-title><h1>{{noticia.title}}</h1></mat-card-title>
+        <mat-card-subtitle>Fuente: IGN</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-card-content>
+          <div>
+            <img mat-card-image src="{{noticia.urlToImage}}">
+          </div>
+          <p>{{noticia.description}}</p>
+        </mat-card-content>
+      </div>
+      <!--<mat-icon class="example-icon" (click)="guardar(noticia.title,noticia.description,noticia.urlToImage)">favorite </mat-icon>-->
+      <button mat-icon-button class="button gray" (click)="guardar(noticia.title,noticia.description,noticia.urlToImage)"> <mat-icon class="example-icon">favorite_border</mat-icon></button>
     </div>
-</div>
+    <hr>
+  </div>
+</mat-card>

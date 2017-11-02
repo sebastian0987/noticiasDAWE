@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-import {NoticiasService} from "../../services/noticias.service";
+import {NoticiasService} from '../../services/noticias.service';
 import {Noticia} from '../../models/Noticia';
 
 @Component({
@@ -29,12 +29,12 @@ export class HomeComponent implements OnInit {
 
     guardar(titulo: string, descripcion: string, urlimagen: string) {
         this.noticia = new Noticia();
-        this.noticia.setTitulo(titulo.replace(/["']/g, ""));
-        this.noticia.setDescripcion(descripcion.replace(/["']/g, ""));
+        this.noticia.setTitulo(titulo.replace(/["']/g, ''));
+        this.noticia.setDescripcion(descripcion.replace(/["']/g, ''));
         this.noticia.setUrl(urlimagen);
         this.noticiasService.addNoticia(this.noticia).subscribe(
             response => {
-                if (response.code == 200) {
+                if (response.code === 200) {
                     this._router.navigate(['/']);
                 } else {
                     console.log(response);

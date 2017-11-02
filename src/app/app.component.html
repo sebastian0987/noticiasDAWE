@@ -1,7 +1,47 @@
-<div>
+<!--<mat-sidenav-container>-->
+  <!--<mat-sidenav>-->
+    <!--&lt;!&ndash; sidenav content &ndash;&gt;-->
+    <!--asd-->
+  <!--</mat-sidenav>-->
 
-  <h1> Cuerpo</h1>
-  <router-outlet></router-outlet>
+  <!--<router-outlet></router-outlet>-->
+<!--</mat-sidenav-container>-->
 
-</div>
+<!--<mat-sidenav-container class="example-container">-->
+  <!--<mat-sidenav #sidenav class="example-sidenav">-->
+    <!--Jolly good!-->
+  <!--</mat-sidenav>-->
+
+  <!--<button mat-mini-fab class="example-fab" mat-button (click)="sidenav.toggle()">-->
+    <!--<mat-icon>add</mat-icon>-->
+  <!--</button>-->
+
+  <!--<div class=example-scrolling-content>-->
+    <!--s-->
+    <!--<button type="button" mat-button (click)="sidenav.toggle()">-->
+      <!--Open sidenav-->
+    <!--</button>-->
+  <!--</div>-->
+<!--</mat-sidenav-container>-->
+
+<mat-sidenav-container class="example-sidenav-fab-container">
+  <mat-sidenav #sidenav mode="side" opened="true">
+    <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+      <mat-icon>close</mat-icon>
+    </button>
+    <div class="example-scrolling-content">
+      asdasdasd
+    </div>
+  </mat-sidenav>
+  <button mat-mini-fab class="example-fab" (click)="sidenav.toggle()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <div class="example-scrolling-content">
+
+  </div>
+</mat-sidenav-container>
+<router-outlet></router-outlet>
+
+
+
 
