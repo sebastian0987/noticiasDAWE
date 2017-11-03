@@ -1,0 +1,17 @@
+img{
+  margin-top: 0px;
+  margin-left: 0px;
+}
+p{
+  text-align: justify;
+}
+@media screen and (max-width: 1000px) {
+  img{
+    max-height: 100%;
+    max-width:  100%;
+  }
+  .mat-card {
+    max-height: 100%;
+    max-width:  100%;
+  }
+}

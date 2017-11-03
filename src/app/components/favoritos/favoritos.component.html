@@ -1,9 +1,37 @@
-<div *ngFor="let noticia of noticias; let i = index">
-    <div class="row">
-      <h2>{{noticia.titulo}}</h2>
-      <div class="col-lg-4">
-        <img src="{{noticia.urlimagen}}">
-      </div>
-    </div>
+<!--<div *ngFor="let noticia of noticias; let i = index">-->
+    <!--<div class="row">-->
+      <!--<h2>{{noticia.titulo}}</h2>-->
+      <!--<div class="col-lg-4">-->
+        <!--<img src="{{noticia.urlimagen}}">-->
+      <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<app-menu-global></app-menu-global>-->
+<div *ngIf="!noticias">
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  <h1 style="color: lightgray">Cargando noticias...</h1>
+  <!--<h2>No existe ninguna noticia</h2>-->
 </div>
 
+<mat-divider class="example-card">
+  <div *ngFor="let noticia of noticias; let i = index">
+    <mat-card class="example-card">
+      <div class="row">
+        <mat-card-header>
+          <mat-card-title><h3>{{noticia.titulo}}</h3></mat-card-title>
+          <mat-card-subtitle>Fuente: IGN</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{noticia.urlimagen}}">
+        <mat-card-content>
+          <p>{{noticia.description}}</p>
+        </mat-card-content>
+      </div>
+      <!--&lt;!&ndash;<mat-icon class="example-icon" (click)="guardar(noticia.title,noticia.description,noticia.urlToImage)">favorite </mat-icon>&ndash;&gt;-->
+      <!--<button mat-icon-button class="button gray" (click)="guardar(noticia.title,noticia.description,noticia.urlToImage)">-->
+        <!--<mat-icon class="example-icon">favorite_border</mat-icon>-->
+      <!--</button>-->
+    </mat-card>
+    <hr>
+  </div>
+</mat-divider>

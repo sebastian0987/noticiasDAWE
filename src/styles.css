@@ -1,7 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 img{
-    /*height: 250px;*/
-    /*width: 250px;*/
-  display: table-cell;
+  max-height: 100%;
+  max-width:  100%;
 }
+.mat-card {
+  max-height: 70%;
+  max-width:  70%;
+}
+hr{
+  margin-left: 0px;
+  max-width:  70%;
+}
+
+/*@media screen and (min-width: 500px) {*/
+  /*.mat-card- {*/
+    /*max-height: 50%;*/
+    /*max-width: 50%;*/
+  /*}*/
+/*}*/

@@ -32,6 +32,7 @@ export class HomeComponent implements OnInit {
         this.noticia.setTitulo(titulo.replace(/["']/g, ''));
         this.noticia.setDescripcion(descripcion.replace(/["']/g, ''));
         this.noticia.setUrl(urlimagen);
+        this.noticia.setLiked(true);
         this.noticiasService.addNoticia(this.noticia).subscribe(
             response => {
                 if (response.code === 200) {

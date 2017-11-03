@@ -1,20 +1,24 @@
-export class Noticia{
+export class Noticia {
 
     public titulo: string;
     public descripcion: string;
     public urlimagen: string;
-    contructor(){}
+    public liked: boolean;
+    contructor() {}
 
-    setTitulo(titulo:string){
+    setTitulo(titulo: string) {
         this.titulo = titulo;
     }
 
-    setDescripcion(descripcion:string){
+    setDescripcion(descripcion: string) {
         this.descripcion = descripcion;
     }
 
-    setUrl(url:string){
-        this.urlimagen=url;
+    setUrl(url: string) {
+        this.urlimagen = url;
+    }
+    setLiked(liked: boolean) {
+      this.liked = liked;
     }
 
 
